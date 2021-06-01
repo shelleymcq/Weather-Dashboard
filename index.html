@@ -1,32 +1,87 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/pure-min.css">
-    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/grids-responsive-min.css">
-    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/base-min.css">
-    <link rel="stylesheet" href="./style.css">
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Weather Dashboard</title>
-</head>
-<body>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header>Weather Dashboard</header>
+
+  <section class="section">
+
+    <div class="columns">
+        <div class="column is-one-quarter">
+            <div class="field">
+                <label class="label">Search for a City:</label>
+             <div class="control">
+              <input class="input" type="text" placeholder="City Name">
+             </div>
+          </div>
+          <div class="field is-grouped">
+            <div class="control">
+              <button class="button is-link">Search</button>
+            </div>
+          </div>
+        </div>  
+        
+        <!-- right side column auto fills rest of space and contains nested columns for 5-day -->
+        <div class="column">
+            <div class="bd-notification" id="today">
+                <div class="block" id="lg-text">City (date) icon</div>
+                <div class="block">Temp:</div>
+                <div class="block">Wind:</div>
+                <div class="block">Humidity:</div>
+                <!-- need to color emphasize UV results -->
+                <div class="block" id="uvIndex">UV Index:</div>
+            </div>
+
+            <div class="columns is-mobile">
+                <div class="column five-day">
+                    <div class="block" id="lg-text">Date</div>
+                    <div class="block">icon</div>
+                    <div class="block">Temp:</div>
+                    <div class="block">Wind:</div>
+                    <div class="block">Humidity:</div>
+                </div>
+                <div class="column five-day">
+                    <div class="block" id="lg-text">Date</div>
+                    <div class="block">icon</div>
+                    <div class="block">Temp:</div>
+                    <div class="block">Wind:</div>
+                    <div class="block">Humidity:</div>
+                </div>
+                <div class="column five-day">
+                    <div class="block" id="lg-text">Date</div>
+                    <div class="block">icon</div>
+                    <div class="block">Temp:</div>
+                    <div class="block">Wind:</div>
+                    <div class="block">Humidity:</div>
+                </div>
+                <div class="column five-day">
+                    <div class="block" id="lg-text">Date</div>
+                    <div class="block">icon</div>
+                    <div class="block">Temp:</div>
+                    <div class="block">Wind:</div>
+                    <div class="block">Humidity:</div>
+                </div>
+                <div class="column five-day">
+                    <div class="block" id="lg-text">Date</div>
+                    <div class="block">icon</div>
+                    <div class="block">Temp:</div>
+                    <div class="block">Wind:</div>
+                    <div class="block">Humidity:</div>
+                </div>
+            </div>
+        </div>
+    </div>
     
-<!-- Going to need the 24ths grid of purecss. 7-24 for the search and history, 15-24 for the 5day forecast -->
 
-<header>Weather Dashboard</header>
+  </section>
 
-<!-- Decide on pure form or input and button -->
-<div class="pure-g">
-<div class="pure-u-7-24">
-    <h2>Search for a City:</h2>
-    <input type="text">
-    <button class="button-success pure-button">Search</button>
-</div>
-<div class="pure-u-15-24">Current & 5D Forecast</div>
+  <script src="script.js"></script>
 
-</div>
-
-    <script src="./script.js"></script>
-</body>
+  </body>
 </html>

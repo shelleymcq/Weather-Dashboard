@@ -1,10 +1,30 @@
-
-
-
-
-
-.button-success {
+header {
+    background-color: #3273dc;
+    font-size: x-large;
     color: white;
-    background: rgb(28, 184, 65);
-
+    text-align: center;
+    height: 40px;
 }
+
+#today {
+    border: solid 2px black;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+#lg-text {
+    font-size: larger;
+    font-weight: bold;
+}
+
+.five-day {
+    background-color: #00d1b2;
+    color: white;
+    margin: 10px;
+}
+
+
+
+.block:not(:last-child) {
+    margin-bottom: 0.75rem;
+  }
