@@ -24,7 +24,11 @@ header {
 }
 
 
-
 .block:not(:last-child) {
     margin-bottom: 0.75rem;
+  }
+
+  .history {
+      border-top: solid 5px black;
+      padding-top: 10px;
   }

@@ -17,13 +17,17 @@
             <div class="field">
                 <label class="label">Search for a City:</label>
              <div class="control">
-              <input class="input" type="text" placeholder="City Name">
+              <input class="input" type="text" placeholder="City Name" id="city-input">
+              <button class="button is-link" id="search-button">Search</button>
              </div>
           </div>
-          <div class="field is-grouped">
-            <div class="control">
-              <button class="button is-link">Search</button>
-            </div>
+
+          <div class="history">
+            <div class="field">
+                <div class="control">
+                  <button class="button is-link is-light" id="previous">Previous</button>
+                </div>
+              </div>
           </div>
         </div>  
         
@@ -80,7 +84,8 @@
     
 
   </section>
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
   <script src="script.js"></script>
 
   </body>
