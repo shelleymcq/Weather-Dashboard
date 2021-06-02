@@ -12,7 +12,7 @@ header {
     padding: 10px;
 }
 
-#lg-text {
+.lg-text {
     font-size: larger;
     font-weight: bold;
 }
