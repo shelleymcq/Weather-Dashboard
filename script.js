@@ -51,7 +51,7 @@ console.log(city)
 // To Do Still
 
 // fix date
-// get the weather icons linked
+// get the weather icons from https://openweathermap.org/img/wn/10d@2x.png
 
 // // need to sort out the 5 days from the every 3-hour data returned. The first 5 elements are just a day and a half at 3 hour intervals
 
