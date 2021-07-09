@@ -8,158 +8,95 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
+    
     <header>Weather Dashboard</header>
 
-  <section class="section">
+    <section class="section">
 
-    <div class="columns">
-        <div class="column is-one-quarter">
-            <div class="field">
-                <label class="label">Search for a City:</label>
-             <div class="control">
-              <input class="input" type="text" placeholder="City Name" id="city-input">
-              <button class="button is-link" id="search-button">Search</button>
-             </div>
+      <div class="tile is-ancestor">
+
+          <!-- search for city and search history side bar -->
+          <div class="tile is-parent is-3">
+              <article class="tile is-child box">
+                  <p class="title">Search for a City</p>
+                  <input class="input block is-link" id="city-input" type="text" placeholder="City Name">
+                  <button class="button block is-fullwidth is-link is-active"  id="search-button">Search</button>
+
+                  <p class="subtitle" id="history">Search History</p>
+                  <div class="content">
+                      <button class="button block is-fullwidth is-link is-light"  id="previous">Previous</button>
+                  </div>
+              </article>
           </div>
 
-          <div class="history">
-            <div class="field">
-                <div class="control">
-                  <button class="button is-link is-light" id="previous">Previous</button>
+          <!-- current weather for today -->
+          <div class="tile is-parent is-vertical">
+              <article class="tile is-child box">
+                  <p class="title" id="current-city">City</p>
+                  <p class="subtitle" id="current-icon">icon</p>
+                  <p class="subtitle" id=current-date>Date</p>
+                  <div>
+                    <p class="current" id="current-temp">temp</p>
+                    <p class="current" id="current-wind">wind</p>
+                    <p class="current" id="current-humi">humidity</p>
+                    <p class="current" id="current-uvin">uv-index</p>
                 </div>
+              </article>
+
+          <!-- 5-day forecast for current city -->
+              <div class="tile is-ancestor">
+
+                  <div class="tile is-parent">
+                    <article class="tile is-child forecast box">
+                      <p class="subtitle forecast" id="day1-date">One</p>
+                      <p class="forecast" id="day1-iconn">icon</p>
+                      <p class="forecast" id="day1-temp">temp</p>
+                      <p class="forecast" id="day1-wind">wind</p>
+                      <p class="forecast" id="day1-humi">humidity</p>
+                    </article>
+                  </div>
+                  <div class="tile is-parent">
+                      <article class="tile is-child forecast box">
+                        <p class="subtitle forecast" id="day2-date">Two</p>
+                        <p class="forecast" id="day2-icon">icon</p>
+                        <p class="forecast" id="day2-temp">temp</p>
+                        <p class="forecast" id="day2-wind">wind</p>
+                        <p class="forecast" id="day2-humi">humidity</p>
+                        </article>
+                  </div>
+                  <div class="tile is-parent">
+                      <article class="tile is-child forecast box">
+                        <p class="subtitle forecast" id="day3-date">Three</p>
+                        <p class="forecast" id="day3-icon">icon</p>
+                        <p class="forecast" id="day3-temp">temp</p>
+                        <p class="forecast" id="day3-wind">wind</p>
+                        <p class="forecast" id="day3-humi">humidity</p>
+                        </article>
+                  </div>
+                  <div class="tile is-parent">
+                      <article class="tile is-child forecast box">
+                        <p class="subtitle forecast" id="day4-date">Four</p>
+                        <p class="forecast" id="day4-icon">icon</p>
+                        <p class="forecast" id="day4-temp">temp</p>
+                        <p class="forecast" id="day4-wind">wind</p>
+                        <p class="forecast" id="day4-humi">humidity</p>
+                        </article>
+                  </div>
+                  <div class="tile is-parent">
+                      <article class="tile is-child forecast box">
+                        <p class="subtitle forecast" id="day5-date">Five</p>
+                        <p class="forecast" id="day5-icon">icon</p>
+                        <p class="forecast" id="day5-temp">temp</p>
+                        <p class="forecast" id="day5-wind">wind</p>
+                        <p class="forecast" id="day5-humi">humidity</p>
+                        </article>
+                    </div>
+
               </div>
           </div>
-        </div>  
-        
-        <!-- right side column auto fills rest of space and contains nested columns for 5-day -->
-        <div class="column">
-            <div class="bd-notification" id="today">
-                <div class="block lg-text" id="current-header"></div>
-                <div class="block" id="current-temp">Temp:  </div>
-                <div class="block" id="current-wind">Wind:  </div>
-                <div class="block" id = "current-humidity">Humidity:  </div>
-                <!-- need to color emphasize UV results -->
-                <div class="block" id="uv-index">UV Index:  </div>
-            </div>
+      </div>
 
-            <div class="columns is-mobile">
-                <div class="column five-day" id="day1">
-                    <div class="block lg-text date">Date</div>
-                    <div class="block icon"></div>
-                    <div class="block temp">Temp:</div>
-                    <div class="block wind">Wind:</div>
-                    <div class="block humidity">Humidity:</div>
-                </div>
-                <div class="column five-day"id="day2">
-                  <div class="block lg-text date">Date</div>
-                  <div class="block icon"></div>
-                  <div class="block temp">Temp:</div>
-                  <div class="block wind">Wind:</div>
-                  <div class="block humidity">Humidity:</div>
-                </div>
-                <div class="column five-day" id="day3">
-                  <div class="block lg-text date">Date</div>
-                  <div class="block icon"></div>
-                  <div class="block temp">Temp:</div>
-                  <div class="block wind">Wind:</div>
-                  <div class="block humidity">Humidity:</div>
-                </div>
-                <div class="column five-day" id="day4">
-                  <div class="block lg-text date">Date</div>
-                  <div class="block icon"></div>
-                  <div class="block temp">Temp:</div>
-                  <div class="block wind">Wind:</div>
-                  <div class="block humidity">Humidity:</div>
-                </div>
-                <div class="column five-day" id="day5">
-                  <div class="block lg-text date">Date</div>
-                  <div class="block icon"></div>
-                  <div class="block temp">Temp:</div>
-                  <div class="block wind">Wind:</div>
-                  <div class="block humidity">Humidity:</div>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-
-  </section>
-
-
-  <section class="section">
-
-    <header class="header">Weather Dashboard</header>
-    
-    <div class="tile is-ancestor">
-
-        <div class="tile is-parent is-3">
-            <article class="tile is-child box">
-                <p class="title">Sarch for a City</p>
-                <input class="input block is-link" id="input" type="text" placeholder="City Name">
-                <button class="button block is-fullwidth is-link is-active" id="search-button">Search</button>
-
-                <p class="subtitle" id="history">Search History</p>
-                <div class="content">
-                    <button class="button block is-fullwidth is-link is-light" id="search-button">Previous</button>
-                </div>
-            </article>
-        </div>
-
-        <div class="tile is-parent is-vertical">
-            <article class="tile is-child box">
-                <p class="title">City (date) ICON</p>
-                <p class="subtitle">With some content</p>
-                <div class="content">
-                    <p>Lorem ipsum dolor sit amet.</p>
-                </div>
-            </article>
-
-            <div class="tile is-ancestor">
-
-                <div class="tile is-parent">
-                  <article class="tile is-child forecast box">
-                    <p class="title forecast">One</p>
-                    <p class="subtitle forecast">Subtitle</p>
-                  </article>
-                </div>
-
-                <div class="tile is-parent">
-                    <article class="tile is-child forecast box">
-                        <p class="title forecast">Two</p>
-                        <p class="subtitle forecast">Subtitle</p>
-                      </article>
-                </div>
-
-                <div class="tile is-parent">
-                    <article class="tile is-child forecast box">
-                        <p class="title forecast">Three</p>
-                        <p class="subtitle forecast">Subtitle</p>
-                      </article>
-                </div>
-
-                <div class="tile is-parent">
-                    <article class="tile is-child forecast box">
-                        <p class="title forecast">Four</p>
-                        <p class="subtitle forecast">Subtitle</p>
-                      </article>
-                </div>
-
-                <div class="tile is-parent">
-                    <article class="tile is-child forecast box">
-                        <p class="title forecast">Five</p>
-                        <p class="subtitle forecast">Subtitle</p>
-                      </article>
-                  </div>
-
-            </div>
-
-        </div>
-       
-    </div>
-
-
-    
-  </section>
+    </section>
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>

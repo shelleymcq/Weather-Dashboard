@@ -4,10 +4,10 @@ const owAPIKey = "3b143d5aec8fa14dd06be97585fc0e4c";
 const cityInput = document.getElementById("city-input")
 const searchBtn = document.getElementById("search-button");
 
-const getCurrentHeader = document.getElementById("current-header");
+const getCurrentHeader = document.getElementById("current-city");
 const getCurrentTemp = document.getElementById("current-temp");
 const getCurrentWind = document.getElementById("current-wind");
-const getCurrentHumidity = document.getElementById("current-humidity");
+const getCurrentHumidity = document.getElementById("current-humi");
 const getCurrentUV = document.getElementById("uv-index");
 
 
