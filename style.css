@@ -6,6 +6,10 @@ header {
     height: 40px;
 }
 
+span {
+    font-weight: bold;
+}
+
 #today {
     border: solid 2px black;
     margin-bottom: 20px;
