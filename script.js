@@ -27,21 +27,32 @@ function getCurrentWeather(city) {
       return response.json();
     })
     .then(function (data) {
+        console.log(data);
         getCurrentHeader.textContent = (data.city.name + " (" + data.list[0].dt_txt + ") " + data.list[0].weather[0].icon);
-        getCurrentTemp.innerText += (data.list[0].main.temp);
-        getCurrentWind.innerText += (data.list[0].wind.speed);
-        getCurrentHumidity.innerText += (data.list[0].main.humidity);
+        getCurrentTemp.innerText += (" " + data.list[0].main.temp + " ");
+        getCurrentWind.innerText += (" " + data.list[0].wind.speed + " ");
+        getCurrentHumidity.innerText += (" " + data.list[0].main.humidity + " ");
+
+        localStorage.setItem("lat", data.city.coord.lat);
+        localStorage.setItem("lon", data.city.coord.lon);
     });
   }
 
 
+
+
+
+
+
+
+
 // get data from localStorage to use in search history
-let latitude = JSON.parse(localStorage.getItem('lat'));
-console.log(latitude)
-let longitude = JSON.parse(localStorage.getItem('long'));
-console.log(longitude)
-let city = localStorage.getItem('city');
-console.log(city)
+// let latitude = JSON.parse(localStorage.getItem('lat'));
+// console.log(latitude)
+// let longitude = JSON.parse(localStorage.getItem('long'));
+// console.log(longitude)
+// let city = localStorage.getItem('city');
+// console.log(city)
 
 
 
