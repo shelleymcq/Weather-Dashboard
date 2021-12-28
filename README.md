@@ -4,8 +4,10 @@ This app allows the user to enter a city name and retrieve current weather as we
 
 Unfortunately, it still needs some work. The user can enter a city name and return the current city name, date, temperature, windspeed, and humidity. The weather icon and UV index are not yet included. The 5-day forecast and history are also not yet functional.
 
+UPDATE: Current Weather now displays all components, including the weather icon and UV index, and the 5-day forecast now displays correctly. The next task is displaying previous search history as clickable buttons.
 
-![screenshot of app](weather.png)
+
+![screenshot of app](updated.png)
 
 
 Deployed application:
@@ -21,5 +23,7 @@ Built with:
     JQuery
     APIs:
     openweathermap.org
-    positionstack.com
     momentjs.com
+
+## Comments or Questions
+Email shelleymcq.dev@gmail.com
